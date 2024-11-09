@@ -1,13 +1,138 @@
+:root {
+  color-scheme: light;
+  --primary-color: #1890ff;
+  --secondary-color: #52c41a;
+  --text-color: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.45);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f2f5;
+  --border-color: #d9d9d9;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --header-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --primary-color: #177ddc;
+    --secondary-color: #49aa19;
+    --text-color: rgba(255, 255, 255, 0.85);
+    --text-secondary: rgba(255, 255, 255, 0.45);
+    --bg-primary: #141414;
+    --bg-secondary: #1f1f1f;
+    --border-color: #434343;
+    --shadow-color: rgba(0, 0, 0, 0.45);
+    --header-bg: #1f1f1f;
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --primary-color: #177ddc;
+  --secondary-color: #49aa19;
+  --text-color: rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(255, 255, 255, 0.45);
+  --bg-primary: #141414;
+  --bg-secondary: #1f1f1f;
+  --border-color: #434343;
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --header-bg: #1f1f1f;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --primary-color: #1890ff;
+  --secondary-color: #52c41a;
+  --text-color: rgba(0, 0, 0, 0.85);
+  --text-secondary: rgba(0, 0, 0, 0.45);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f2f5;
+  --border-color: #d9d9d9;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --header-bg: #ffffff;
+}
+
 body {
+  background-color: var(--bg-primary);
+  color: var(--text-color);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.ant-layout {
+  background-color: var(--bg-secondary);
+}
+
+.ant-layout-header {
+  background-color: var(--header-bg) !important;
+  box-shadow: 0 2px 8px var(--shadow-color) !important;
+}
+
+.ant-layout-content {
+  background-color: var(--bg-primary);
+}
+
+.ant-layout-footer {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+.root-layout {
+  margin-inline-start: 0;
+  min-height: 100vh;
+}
+
+.site-header {
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.site-content {
+  margin: 8px 16px 16px;
+  overflow: initial;
+  transition: transform 0.2s ease-in-out;
+}
+
+.site-footer {
+  text-align: center;
+}
+
+.ant-layout-header {
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.ant-layout-content {
+  background-color: var(--bg-primary);
+}
+
+.ant-layout-footer {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+}
+
+.ant-typography {
+  margin: 0;
 }

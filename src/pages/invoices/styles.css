@@ -1,0 +1,12 @@
+.invoices-page {
+    display: flex;
+    background-color: var(--bg-secondary);
+}
+
+.invoices-page .ant-card-body {
+    padding: 4px;
+}
+
+.invoices-page .ant-card-cover {
+    padding: 8px 8px 0 8px;
+}
